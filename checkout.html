@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"utf-8\" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+  <title>The Daily Grind - Checkout</title>
+  <meta name=\"description\" content=\"Checkout page for The Daily Grind. Enter details to complete your order.\" />
+  <link href=\"https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;600;700&display=swap\" rel=\"stylesheet\" />
+  <script src=\"https://cdn.tailwindcss.com\"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { lora: ['Lora','serif'], inter: ['Inter','ui-sans-serif'] } } } }
+  </script>
+</head>
+<body class=\"font-inter text-[#6B4F4B] bg-white min-h-screen\">
+  <!-- Navbar -->
+  <header class=\"fixed w-full z-50 bg-[#6B4F4B] bg-opacity-90 shadow-md\">
+    <nav class=\"max-w-7xl mx-auto px-4 py-4 flex items-center justify-between\">
+      <a href=\"index.html\" class=\"text-white text-xl font-bold font-lora\">The Daily Grind</a>
+      <ul class=\"hidden md:flex space-x-6 text-white font-inter\">
+        <li><a href=\"index.html\">Home</a></li>
+        <li><a href=\"about.html\" class=\"hover:underline\">Our Story</a></li>
+        <li><a href=\"cart.html\" class=\"hover:underline\">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class=\"relative min-h-screen bg-[#F5F5F5] flex items-center justify-center\">
+    <div class=\"max-w-3xl px-6 text-center\">
+      <h1 class=\"font-lora text-4xl md:text-5xl mb-4\">Checkout</h1>
+      <p class=\"font-inter text-lg text-[#6B4F4B] mb-6\">Review your items and enter your details to complete your order.</p>
+    </div>
+  </section>
+
+  <!-- Checkout Form -->
+  <section class=\"py-12 bg-white\">
+    <div class=\"max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start\">
+      <form class=\"space-y-4\">
+        <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">
+          <input placeholder=\"Full Name\" class=\"p-3 rounded border border-gray-300\" />
+          <input placeholder=\"Email\" type=\"email\" class=\"p-3 rounded border border-gray-300\" />
+        </div>
+        <input placeholder=\"Address\" class=\"w-full p-3 rounded border border-gray-300\" />
+        <div class=\"grid grid-cols-2 gap-4\">
+          <input placeholder=\"Card Number\" class=\"p-3 rounded border border-gray-300\" />
+          <input placeholder=\"Expiry\" class=\"p-3 rounded border border-gray-300\" />
+        </div>
+        <div class=\"grid grid-cols-2 gap-4\">
+          <input placeholder=\"CVC\" class=\"p-3 rounded border border-gray-300\" />
+          <button class=\"bg-[#D97706] text-white py-3 rounded transition-all duration-300 hover:brightness-110\">Place Order</button>
+        </div>
+      </form>
+      <aside class=\"border rounded-lg p-4 bg-[#F8F5EF]\">
+        <h3 class=\"font-lora text-lg mb-2\">Order Summary</h3>
+        <ul class=\"font-inter text-sm space-y-2\">
+          <li>Caramel Macchiato ×1 — $4.50</li>
+          <li>Vanilla Latte ×2 — $9.50</li>
+          <li>Espresso ×1 — $2.50</li>
+        </ul>
+        <hr class=\"my-3\" />
+        <div class=\"flex justify-between font-inter\"><span>Subtotal</span><span>$16.50</span></div>
+        <div class=\"flex justify-between font-inter\"><span>Tax</span><span>$1.50</span></div>
+        <div class=\"flex justify-between font-inter font-semibold mt-2\"><span>Total</span><span>$18.00</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class=\"bg-[#6B4F4B] text-white pt-8 pb-6\">
+    <div class=\"max-w-7xl mx-auto px-4 text-sm\">© 2025 The Daily Grind. Nadargul, Telangana, India.</div>
+  </footer>
+</body>
+</html>

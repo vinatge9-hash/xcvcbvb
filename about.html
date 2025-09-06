@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"utf-8\" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+  <title>The Daily Grind - Our Story</title>
+  <meta name=\"description\" content=\"Learn about the passion behind The Daily Grind and how we craft community through coffee.\" />
+  <link href=\"https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;600;700&display=swap\" rel=\"stylesheet\" />
+  <script src=\"https://cdn.tailwindcss.com\"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { lora: ['Lora','serif'], inter: ['Inter','ui-sans-serif'] } } } }
+  </script>
+</head>
+<body class=\"font-inter text-[#6B4F4B] bg-white min-h-screen\">
+  <!-- Navbar -->
+  <header class=\"fixed w-full z-50 bg-[#6B4F4B] bg-opacity-90 shadow-md\">
+    <nav class=\"max-w-7xl mx-auto px-4 py-4 flex items-center justify-between\">
+      <a href=\"index.html\" class=\"text-white text-xl font-bold font-lora\">The Daily Grind</a>
+      <ul class=\"hidden md:flex space-x-6 text-white font-inter\">
+        <li><a href=\"index.html\">Home</a></li>
+        <li><a href=\"about.html\" class=\"hover:underline\">Our Story</a></li>
+        <li><a href=\"contact.html\" class=\"hover:underline\">Visit Us</a></li>
+        <li><a href=\"cart.html\" class=\"hover:underline\">Cart</a></li>
+        <li><a href=\"checkout.html\" class=\"hover:underline\">Checkout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero/Intro -->
+  <section class=\"relative min-h-screen bg-[#F5F5F5] flex items-center justify-center\">
+    <div class=\"max-w-4xl px-6 text-center\">
+      <h1 class=\"font-lora text-4xl md:text-5xl mb-4\">Our Story</h1>
+      <p class=\"font-inter text-lg text-[#6B4F4B] mb-6\">The Daily Grind began with a simple idea: to create a gathering place where coffee, craft, and community come together. From our first brew to today, we’ve pursued quality, hospitality, and a warm, welcoming environment for all who walk through our door.</p>
+    </div>
+  </section>
+
+  <!-- Founders Image & Narrative -->
+  <section class=\"py-16 bg-white\">
+    <div class=\"max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center\">
+      <img src=\"https://images.pexels.com/photos/4349930/pexels-photo-4349930.jpeg?auto=compress&cs=tinysrgb&h=650&w=940\" alt=\"Founders at the counter\" class=\"w-full h-72 object-cover rounded-lg shadow-md\" />
+      <div>
+        <h2 class=\"font-lora text-3xl md:text-4xl mb-4\">Meet the Team</h2>
+        <p class=\"font-inter text-lg text-[#6B4F4B] mb-4\">We’re a small, passionate crew who believe great coffee starts with great people. Our founders built The Daily Grind to be a neighborhood hub where conversations brew as richly as the coffee.</p>
+        <p class=\"font-inter text-[#6B4F4B]\">From sourcing beans with care to crafting each drink by hand, we’re committed to sustainability, warmth, and a consistent, high-quality experience for every guest who sits at our bar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class=\"bg-[#6B4F4B] text-white pt-12 pb-6\">
+    <div class=\"max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8\">
+      <div>
+        <h4 class=\"font-lora text-lg mb-2\">The Daily Grind</h4>
+        <p class=\"font-inter text-sm\">Cozy coffee shop with a passion for community and craft beverages.</p>
+      </div>
+      <div>
+        <h4 class=\"font-lora text-lg mb-2\">Quick Links</h4>
+        <ul class=\"font-inter text-sm space-y-1\">
+          <li><a href=\"index.html\" class=\"hover:underline\">Home</a></li>
+          <li><a href=\"about.html\" class=\"hover:underline\">Our Story</a></li>
+          <li><a href=\"contact.html\" class=\"hover:underline\">Visit Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class=\"font-lora text-lg mb-2\">Newsletter</h4>
+        <p class=\"font-inter text-sm mb-2\">Get updates on events and seasonal brews.</p>
+        <form>
+          <input aria-label=\"Email\" placeholder=\"Email\" class=\"w-full p-2 rounded text-black\" />
+          <button class=\"mt-2 w-full bg-[#D97706] text-white py-2 rounded transition-all duration-300 hover:brightness-110\">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <hr class=\"my-6 border-gray-700\" />
+    <p class=\"text-center text-sm font-inter pb-4\">© 2025 The Daily Grind. Nadargul, Telangana, India.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      document.body.classList.remove('opacity-0');
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => sec.classList.add('opacity-0','translate-y-6'));
+      const io = new IntersectionObserver((entries)=>{ entries.forEach(e => { if(e.isIntersecting){ e.target.classList.remove('opacity-0','translate-y-6'); e.target.classList.add('opacity-100','translate-y-0'); } }); }, { threshold: 0.1 });
+      sections.forEach(s => io.observe(s));
+    });
+  </script>
+</body>
+</html>

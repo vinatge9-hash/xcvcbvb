@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"utf-8\" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+  <title>The Daily Grind - Visit Us</title>
+  <meta name=\"description\" content=\"Visit The Daily Grind in Nadargul. Find our hours, address, and a simple contact form.\" />
+  <link href=\"https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;600;700&display=swap\" rel=\"stylesheet\" />
+  <script src=\"https://cdn.tailwindcss.com\"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { lora: ['Lora','serif'], inter: ['Inter','ui-sans-serif'] } } } }
+  </script>
+</head>
+<body class=\"font-inter text-[#6B4F4B] bg-white min-h-screen\">
+  <!-- Navbar -->
+  <header class=\"fixed w-full z-50 bg-[#6B4F4B] bg-opacity-90 shadow-md\">
+    <nav class=\"max-w-7xl mx-auto px-4 py-4 flex items-center justify-between\">
+      <a href=\"index.html\" class=\"text-white text-xl font-bold font-lora\">The Daily Grind</a>
+      <ul class=\"hidden md:flex space-x-6 text-white font-inter\">
+        <li><a href=\"index.html\">Home</a></li>
+        <li><a href=\"about.html\" class=\"hover:underline\">Our Story</a></li>
+        <li><a href=\"contact.html\" class=\"hover:underline\">Visit Us</a></li>
+        <li><a href=\"cart.html\" class=\"hover:underline\">Cart</a></li>
+        <li><a href=\"checkout.html\" class=\"hover:underline\">Checkout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class=\"relative min-h-screen bg-[#F5F5F5] flex items-center justify-center\">
+    <div class=\"max-w-3xl px-6 text-center\">
+      <h1 class=\"font-lora text-4xl md:text-5xl mb-4\">Visit The Daily Grind</h1>
+      <p class=\"font-inter text-lg text-[#6B4F4B] mb-6\">We’re open daily in Nadargul, serving thoughtfully sourced beans, comforting bites, and a space to unwind with friends and neighbors.</p>
+    </div>
+  </section>
+
+  <!-- Location & Contact -->
+  <section class=\"py-12 bg-white\">
+    <div class=\"max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center\">
+      <div>
+        <h2 class=\"font-lora text-3xl mb-2\">Find Us</h2>
+        <p class=\"font-inter text-lg mb-4\">789 Coffee Avenue, Nadargul, Telangana, India</p>
+        <p class=\"font-inter text-sm text-gray-700\">Phone: +91 98765 43210</p>
+        <p class=\"font-inter text-sm text-gray-700\">Hours: Mon-Sun 7:00 AM – 9:00 PM</p>
+      </div>
+      <div>
+        <img src=\"https://images.pexels.com/photos/2530586/pexels-photo-2530586.jpeg?auto=compress&cs=tinysrgb&h=650&w=940\" alt=\"Map placeholder\" class=\"w-full h-48 object-cover rounded-lg shadow-md\" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class=\"py-12 bg-[#F5F5F5]\">
+    <div class=\"max-w-7xl mx-auto px-4\">
+      <h2 class=\"font-lora text-3xl mb-4\">Send Us a Message</h2>
+      <form class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">
+        <input aria-label=\"Name\" placeholder=\"Name\" class=\"p-2 rounded bg-white border border-gray-300\" />
+        <input aria-label=\"Email\" placeholder=\"Email\" class=\"p-2 rounded bg-white border border-gray-300\" />
+        <textarea aria-label=\"Message\" placeholder=\"Message\" rows=\"4\" class=\"md:col-span-2 p-2 rounded bg-white border border-gray-300\"></textarea>
+        <button class=\"md:col-span-2 self-start bg-[#D97706] text-white py-2 px-4 rounded transition-all duration-300 hover:brightness-110\">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class=\"bg-[#6B4F4B] text-white pt-12 pb-6\">
+    <div class=\"max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8\">
+      <div>
+        <h4 class=\"font-lora text-lg mb-2\">The Daily Grind</h4>
+        <p class=\"font-inter text-sm\">Cozy cafe in Nadargul, focused on community and quality coffee.</p>
+      </div>
+      <div>
+        <h4 class=\"font-lora text-lg mb-2\">Quick Links</h4>
+        <ul class=\"font-inter text-sm space-y-1\">
+          <li><a href=\"index.html\" class=\"hover:underline\">Home</a></li>
+          <li><a href=\"about.html\" class=\"hover:underline\">Our Story</a></li>
+          <li><a href=\"contact.html\" class=\"hover:underline\">Visit Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class=\"font-lora text-lg mb-2\">Newsletter</h4>
+        <p class=\"font-inter text-sm mb-2\">Get updates on events and seasonal brews.</p>
+        <form>
+          <input aria-label=\"Email\" placeholder=\"Email\" class=\"w-full p-2 rounded text-black\" />
+          <button class=\"mt-2 w-full bg-[#D97706] text-white py-2 rounded transition-all duration-300 hover:brightness-110\">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <hr class=\"my-6 border-gray-700\" />
+    <p class=\"text-center text-sm font-inter pb-4\">© 2025 The Daily Grind. Nadargul, Telangana, India.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      document.body.classList.remove('opacity-0');
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => sec.classList.add('opacity-0','translate-y-6'));
+      const io = new IntersectionObserver((entries)=>{ entries.forEach(e => { if(e.isIntersecting){ e.target.classList.remove('opacity-0','translate-y-6'); e.target.classList.add('opacity-100','translate-y-0'); } }); }, { threshold: 0.1 });
+      sections.forEach(s => io.observe(s));
+    });
+  </script>
+</body>
+</html>
